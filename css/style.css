@@ -1,0 +1,420 @@
+/* ========================================
+   ShopMart - FIXED TEXT VISIBILITY CSS
+   100% Readable Text on ALL Pages
+======================================== */
+
+/* ==================== 
+   GLOBAL RESET & BASE
+===================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333 !important;
+    background: #f8f9fa !important;
+}
+
+/* ==================== 
+   CRITICAL TEXT VISIBILITY FIXES
+===================== */
+/* FORCE READABLE TEXT ON ALL PAGES */
+.text-dark { color: #1a1a1a !important; }
+.text-muted { color: #6c757d !important; }
+.text-primary { color: #1976d2 !important; }
+.text-success { color: #4caf50 !important; }
+.text-warning { color: #ff9800 !important; }
+.text-danger { color: #f44336 !important; }
+.text-info { color: #2196f3 !important; }
+
+/* Form labels ALWAYS readable */
+.form-label {
+    color: #333 !important;
+    font-weight: 600 !important;
+}
+
+/* ==================== 
+   LOGIN & REGISTER - PERFECT CONTRAST
+===================== */
+.bg-gradient-login,
+.bg-gradient-register {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+.bg-gradient-login::before,
+.bg-gradient-register::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.97) !important;
+    z-index: 1;
+}
+
+.bg-gradient-login > *,
+.bg-gradient-register > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ENSURE TEXT IS DARK ON OVERLAYS */
+.bg-gradient-login .card,
+.bg-gradient-register .card {
+    background: #fff !important;
+}
+
+.bg-gradient-login .form-label,
+.bg-gradient-register .form-label,
+.bg-gradient-login .text-dark,
+.bg-gradient-register .text-dark {
+    color: #1a1a1a !important;
+}
+
+.bg-gradient-login .text-muted,
+.bg-gradient-register .text-muted {
+    color: #6c757d !important;
+}
+
+/* ==================== 
+   MATERIAL DESIGN SHADOWS
+===================== */
+.shadow-sm { 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04) !important; 
+}
+.shadow { 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08) !important; 
+}
+.shadow-lg { 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15), 0 4px 12px rgba(0,0,0,0.12) !important; 
+}
+.hover-shadow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-shadow:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 8px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* ==================== 
+   GRADIENTS (Cards/Headers Only)
+===================== */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%) !important;
+    color: #fff !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%) !important;
+    color: #fff !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%) !important;
+    color: #fff !important;
+}
+
+.bg-gradient-admin {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* ==================== 
+   MATERIAL INPUT GROUPS - FIXED
+===================== */
+.input-group-outline .form-control,
+.input-group-outline .form-select {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    background: #fafafa !important;
+    color: #333 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group-outline .form-control:focus,
+.input-group-outline .form-select:focus {
+    border-color: #1976d2 !important;
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.1) !important;
+    background: #fff !important;
+    color: #333 !important;
+}
+
+.input-group-outline .input-group-text {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 12px 0 0 12px !important;
+    background: #f8f9fa !important;
+    border-right: none !important;
+    color: #666 !important;
+}
+
+/* ==================== 
+   CARDS - WHITE BACKGROUND ALWAYS
+===================== */
+.card {
+    border: none !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    color: #333 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-body,
+.card-header {
+    color: #333 !important;
+}
+
+.card:hover {
+    transform: translateY(-4px) !important;
+}
+
+/* ==================== 
+   BUTTONS - FIXED CONTRAST
+===================== */
+.btn {
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    border: none !important;
+    color: #fff !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12) !important;
+}
+
+.btn-primary { background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%) !important; }
+.btn-success { background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%) !important; }
+.btn-warning { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%) !important; }
+.btn-danger { background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%) !important; }
+
+.btn-outline-primary {
+    color: #1976d2 !important;
+    border: 2px solid #1976d2 !important;
+    background: transparent !important;
+}
+
+.btn-outline-primary:hover {
+    background: #1976d2 !important;
+    color: #fff !important;
+}
+
+.btn-outline-secondary {
+    color: #6c757d !important;
+    border: 2px solid #6c757d !important;
+    background: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+    background: #6c757d !important;
+    color: #fff !important;
+}
+
+/* ==================== 
+   NAVBAR - FIXED
+===================== */
+.navbar {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    background: #1976d2 !important;
+}
+
+.navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    background: rgba(255,255,255,0.1) !important;
+    color: #fff !important;
+}
+
+/* ==================== 
+   HERO SECTION - FIXED
+===================== */
+.hero-section::before {
+    background: rgba(0,0,0,0.4) !important;
+}
+
+.hero-section .display-4,
+.hero-section .lead {
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+/* ==================== 
+   SNACKBAR - FIXED
+===================== */
+.snackbar {
+    visibility: hidden;
+    min-width: 320px;
+    max-width: 90vw;
+    background: #323232 !important;
+    color: #fff !important;
+    text-align: center;
+    border-radius: 12px;
+    padding: 16px 24px;
+    position: fixed;
+    z-index: 1050;
+    left: 50%;
+    bottom: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateX(-50%);
+}
+
+.snackbar.show {
+    visibility: visible;
+    animation: slideUpSnackbar 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.snackbar.success { 
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%) !important; 
+    color: #fff !important;
+}
+.snackbar.error { 
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%) !important; 
+    color: #fff !important;
+}
+.snackbar.warning { 
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%) !important; 
+    color: #fff !important;
+}
+
+@keyframes slideUpSnackbar {
+    0% { bottom: 0; opacity: 0; transform: translateX(-50%) translateY(100%); }
+    100% { bottom: 30px; opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ==================== 
+   CATEGORY CARDS - FIXED
+===================== */
+.category-card .card-body {
+    color: #fff !important;
+}
+
+.category-card .card-title,
+.category-card .card-text {
+    color: #fff !important;
+}
+
+/* ==================== 
+   CART & CHECKOUT - FIXED
+===================== */
+.cart-item-img,
+.cart-item-img {
+    object-fit: cover !important;
+}
+
+.quantity-controls {
+    background: #f8f9fa !important;
+    border: 2px solid #e9ecef !important;
+    color: #333 !important;
+}
+
+/* ==================== 
+   ADMIN PAGES - FIXED
+===================== */
+.bg-gradient-admin .card {
+    background: #fff !important;
+    color: #333 !important;
+}
+
+.bg-gradient-admin .form-label,
+.bg-gradient-admin .text-dark {
+    color: #1a1a1a !important;
+}
+
+/* ==================== 
+   RESPONSIVE - MOBILE FIXES
+===================== */
+@media (max-width: 768px) {
+    .snackbar { 
+        min-width: 90vw !important; 
+        left: 5vw !important;
+        bottom: 20px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .input-group-text {
+        display: flex !important;
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+/* ==================== 
+   OVERRIDE BOOTSTRAP CONFLICTS
+===================== */
+/* Force Bootstrap text classes */
+.text-white { color: #fff !important; }
+.text-black { color: #000 !important; }
+
+/* Ensure all cards have white background */
+.card, .modal-content {
+    background: #fff !important;
+    color: #333 !important;
+}
+
+/* Fix modal text */
+.modal-content .modal-title,
+.modal-content .modal-body {
+    color: #333 !important;
+}
+
+/* ==================== 
+   ANIMATIONS
+===================== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up { animation: fadeInUp 0.6s ease-out; }
+
+/* ==================== 
+   LOADING SPINNER
+===================== */
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==================== 
+   CUSTOM SCROLLBAR
+===================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

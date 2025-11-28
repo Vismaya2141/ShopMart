@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ShopMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation (same as home) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="material-icons">store</i> ShopMart
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="shop.html">Shop</a>
+                </li>
+            </ul>
+            <!-- SAME RIGHT SIDE MENU AS ABOVE -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="cart.html">
+                        <i class="material-icons">shopping_cart</i>
+                        <span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="adminLink" style="display: none;">
+                    <a class="nav-link" href="admin-add-product.html">
+                        <i class="material-icons">add</i> Add Product
+                    </a>
+                </li>
+                <li class="nav-item" id="loginLink">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item" id="logoutLink" style="display: none;">
+                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h1 class="mb-0">
+                <i class="material-icons">storefront</i> Our Products
+            </h1>
+            <div id="adminControls" style="display: none;" class="d-flex gap-2">
+                <a href="admin-add-product.html" class="btn btn-success">
+                    <i class="material-icons">add</i> Add Product
+                </a>
+            </div>
+        </div>
+
+        <div class="row" id="productsContainer">
+            <!-- Products will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Snackbar -->
+    <div id="snackbar" class="snackbar"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        checkAuthStatus();
+        loadProducts();
+        updateCartCount();
+    </script>
+</body>
+</html>
